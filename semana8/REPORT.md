@@ -27,7 +27,7 @@
 | Historial system → assistant → tool y máximo de vueltas | `responder()` | Recuperación, IDs de tools y exactamente cuatro llamadas |
 | POST /predict y /chat con Depends(get_llm) | `app/routers/` | TestClient y peticiones HTTP a Uvicorn |
 | Chatbot completo con simulador | Frontend y cliente docentes sin cambios | Interacción visual en VS Code |
-| Entrega reproducible y enlace final | README, lockfile, modelo y rama local | Publicación pendiente de autorización |
+| Entrega reproducible y enlace final | README, lockfile, modelo y rama de entrega | Verificado en copia limpia; publicación autorizada |
 
 Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/).
 
@@ -79,4 +79,4 @@ Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-l
 
 `>>` El modelo es sintético y los umbrales vienen impuestos por el ejercicio. Esta práctica no evalúa discriminación ni calibración para solicitudes reales: el resultado demuestra integración, no validez para conceder préstamos.
 
-`=>` Backend implementado y comprobado localmente en `tareas-semana8`. La publicación en el fork requiere la autorización indicada por el AGENTS.md del usuario; no doy por existente una rama remota todavía.
+`=>` Backend implementado y comprobado en `tareas-semana8`. Rama de entrega: [semana8 en el fork dalonsoLabs](https://github.com/dalonsoLabs/icai-muiaap-operacion-de-modelos/tree/tareas-semana8/semana8). Publicación autorizada por el usuario el 14 de noviembre de 2026.
