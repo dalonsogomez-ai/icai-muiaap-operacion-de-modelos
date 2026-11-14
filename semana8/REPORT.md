@@ -69,6 +69,8 @@ Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-l
 
 `>>` He probado el frontend real en el navegador integrado de VS Code: backend conectado, envío del ejemplo completo, despliegue de los seis argumentos y del resultado de la tool, conversación en dos turnos con los campos que faltan y rechazo de antigüedad 15 para edad 20. El registro de estas observaciones está en [ejecucion-visual.md](entrega/evidencias/ejecucion-visual.md). El enunciado no exige capturas de pantalla.
 
+`>>` He repetido `uv sync --locked` y `uv run --locked pytest` en una copia limpia obtenida con `git archive` del commit `b818f78`, sin reutilizar el entorno ni los ficheros ignorados del worktree. Resultado: **31 passed, 1 warning in 9.51s**. El modelo está incluido en Git. Registro completo: [checkout-limpio.txt](entrega/evidencias/checkout-limpio.txt).
+
 ## Alcance y límites
 
 `~>` Conservo sin cambios `llm.py`, el frontend, los contratos del chat, los tests y el script de entrenamiento. Docker es un extra opcional del assignment. El MD y el PDF concretos no exigen ngrok, aunque el roadmap antiguo lo mencione.
