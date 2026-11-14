@@ -27,7 +27,7 @@ def decidir(probabilidad: float) -> str:
 
 def predecir(entrada: PrestamoEntrada) -> PrediccionSalida:
     valores = [getattr(entrada, variable) for variable in VARIABLES]
-    # La columna 1 corresponde al impago en el modelo docente.
+    # Tomo la columna 1 porque las clases del modelo docente son [0, 1].
     probabilidad = float(modelo.predict_proba([valores])[0][1])
     return PrediccionSalida(
         probabilidad_impago=probabilidad, decision=decidir(probabilidad)

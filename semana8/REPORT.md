@@ -27,7 +27,7 @@
 | Historial system → assistant → tool y máximo de vueltas | `responder()` | Recuperación, IDs de tools y exactamente cuatro llamadas |
 | POST /predict y /chat con Depends(get_llm) | `app/routers/` | TestClient y peticiones HTTP a Uvicorn |
 | Chatbot completo con simulador | Frontend y cliente docentes sin cambios | Interacción visual en VS Code |
-| Entrega reproducible y enlace final | README, lockfile, modelo y rama de entrega | Verificado en copia limpia; publicación autorizada |
+| Entrega reproducible y enlace final | README, lockfile, modelo y rama de entrega | Verificado en copia limpia y publicado en el fork |
 
 Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/).
 
@@ -71,6 +71,14 @@ Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-l
 
 `>>` He repetido `uv sync --locked` y `uv run --locked pytest` en una copia limpia obtenida con `git archive` del commit `b818f78`, sin reutilizar el entorno ni los ficheros ignorados del worktree. Resultado: **31 passed, 1 warning in 9.51s**. El modelo está incluido en Git. Registro completo: [checkout-limpio.txt](entrega/evidencias/checkout-limpio.txt).
 
+## Revisión del estilo respecto a entregas anteriores
+
+`~>` Mantengo la leyenda de flechas y la separación entre objetivo, decisión, acción, evidencia y resultado que aparece en los informes de S3–S7. Los comentarios propios son breves, en español y, cuando describen una decisión, en primera persona, como en el código de inferencia de S3 y el cliente AEMET de S7. He aclarado el comentario del error de inferencia: devuelve `ok=False`; no representa un cálculo correcto.
+
+`~>` Conservo el docstring `YA HECHO` de `leer_argumentos` porque pertenece al starter del profesor. No homogeneizo textos docentes ajenos a los cinco TODO. Tampoco añado docstrings a cada función: S7 ya utiliza comentarios selectivos y aquí priorizo explicar los puntos que pueden inducir a error.
+
+`~>` El informe es más extenso que el de AEMET porque esta práctica enlaza validación, modelo, tool y conversación. Mantengo sus justificaciones y evidencias verificables. No traslado Ruff, el bundle de Wine ni la carpeta `zip_semana6` de entregas anteriores: el enunciado de S8 pide completar el backend dentro de `problem` y probarlo con pytest. La regeneración del Joblib y el uso del simulador responden al material concreto de S8, tal como justifico arriba.
+
 ## Alcance y límites
 
 `~>` Conservo sin cambios `llm.py`, el frontend, los contratos del chat, los tests y el script de entrenamiento. Docker es un extra opcional del assignment. El MD y el PDF concretos no exigen ngrok, aunque el roadmap antiguo lo mencione.
@@ -79,4 +87,4 @@ Las rutas de código de la tabla son relativas a [problem/](modules/08-chatbot-l
 
 `>>` El modelo es sintético y los umbrales vienen impuestos por el ejercicio. Esta práctica no evalúa discriminación ni calibración para solicitudes reales: el resultado demuestra integración, no validez para conceder préstamos.
 
-`=>` Backend implementado y comprobado en `tareas-semana8`. Rama de entrega: [semana8 en el fork dalonsoLabs](https://github.com/dalonsoLabs/icai-muiaap-operacion-de-modelos/tree/tareas-semana8/semana8). Publicación autorizada por el usuario el 14 de noviembre de 2026.
+`=>` Backend implementado y comprobado en `tareas-semana8`. Rama de entrega: [semana8 en el fork dalonsoLabs](https://github.com/dalonsoLabs/icai-muiaap-operacion-de-modelos/tree/tareas-semana8/semana8).

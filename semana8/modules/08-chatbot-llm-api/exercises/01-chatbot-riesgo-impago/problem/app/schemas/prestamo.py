@@ -19,7 +19,7 @@ class PrestamoEntrada(BaseModel):
     @field_validator("antiguedad_laboral_anios")
     @classmethod
     def validar_antiguedad(cls, valor: int, info: ValidationInfo) -> int:
-        # Edad se declara antes; si ya falló, Pydantic conserva ese error.
+        # Declaro edad antes; si ya falló, conservo su error sin comparar la antigüedad.
         edad = info.data.get("edad")
         if edad is not None and valor > edad - 16:
             raise ValueError("La antigüedad laboral no puede superar edad - 16.")

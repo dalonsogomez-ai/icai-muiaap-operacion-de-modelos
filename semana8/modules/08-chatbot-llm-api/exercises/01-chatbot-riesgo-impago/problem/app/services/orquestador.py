@@ -50,7 +50,7 @@ def ejecutar_tool(nombre, argumentos_json) -> dict:
         # Devuelvo el detalle de validación para que el LLM pueda corregirse.
         return {"ok": False, "error": str(error)}
     except Exception:
-        # Esta frontera devuelve ok incluso si falla la inferencia.
+        # Devuelvo ok=False si falla la inferencia, sin propagar detalles internos.
         return {"ok": False, "error": "No se ha podido ejecutar el cálculo de riesgo."}
 
 

@@ -9,5 +9,5 @@ router = APIRouter()
 
 @router.post("/chat", response_model=ChatSalida)
 def chat(entrada: ChatEntrada, llm=Depends(get_llm)) -> ChatSalida:
-    # La dependencia permite sustituir el cliente en tests sin usar la red.
+    # Inyecto el cliente para poder sustituirlo en tests sin usar la red.
     return responder(entrada.mensajes, llm)
