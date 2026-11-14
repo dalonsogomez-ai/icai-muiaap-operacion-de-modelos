@@ -1,0 +1,3 @@
+warning: No `requires-python` value found in the workspace. Defaulting to `>=3.13`.
+Modelo guardado en models/modelo_impago.joblib
+Variables, en este orden: ['edad', 'ingresos_mensuales', 'importe_prestamo', 'plazo_meses', 'antiguedad_laboral_anios', 'impagos_previos']

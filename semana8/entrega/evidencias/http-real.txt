@@ -1,0 +1,16 @@
+warning: No `requires-python` value found in the workspace. Defaulting to `>=3.13`.
+GET /health 200
+{"status": "ok"}
+POST /predict 200
+{"probabilidad_impago": 0.16371773677464993, "decision": "aprobar"}
+POST /predict 422
+{"detail": [{"type": "greater_than_equal", "loc": ["body", "edad"], "msg": "Input should be greater than or equal to 18", "input": 15, "ctx": {"ge": 18}}]}
+POST /predict 422
+{"detail": [{"type": "extra_forbidden", "loc": ["body", "saldo_cuenta"], "msg": "Extra inputs are not permitted", "input": 100}]}
+POST /chat 200
+{"respuesta": "La probabilidad de impago es 16.4%. Decision: aprobar.", "herramienta": {"nombre": "calcular_riesgo_impago", "argumentos": {"edad": 30, "ingresos_mensuales": 2500, "importe_prestamo": 12000, "plazo_meses": 36, "antiguedad_laboral_anios": 5, "impagos_previos": 0}, "resultado": {"ok": true, "probabilidad_impago": 0.16371773677464993, "decision": "aprobar"}}}
+POST /chat 200
+{"respuesta": "Me faltan estos datos: importe_prestamo, plazo_meses, antiguedad_laboral_anios, impagos_previos.", "herramienta": null}
+POST /chat 422
+{"detail": [{"type": "too_short", "loc": ["body", "mensajes"], "msg": "List should have at least 1 item after validation, not 0", "input": [], "ctx": {"field_type": "List", "min_length": 1, "actual_length": 0}}]}
+OpenAPI guardado: tres endpoints y campos extra prohibidos.

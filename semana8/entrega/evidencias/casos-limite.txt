@@ -1,0 +1,8 @@
+warning: No `requires-python` value found in the workspace. Defaulting to `>=3.13`.
+OK: fronteras exactas de 0.2 y 0.5.
+OK: antigüedad en límites y números no finitos rechazados.
+OK: JSON inválido, campos extra y fallo de inferencia vuelven como ok=False.
+OK: schema completo de la tool idéntico al contrato Pydantic.
+OK: exactamente cuatro llamadas al LLM y conversación original sin mutar.
+OK: cada tool conserva su tool_call_id; el frontend recibe la última herramienta.
+Todas las comprobaciones adicionales han pasado.

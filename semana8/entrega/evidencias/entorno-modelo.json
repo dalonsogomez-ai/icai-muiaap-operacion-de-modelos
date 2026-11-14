@@ -1,0 +1,28 @@
+{
+  "python": "3.13.13",
+  "dependencias": {
+    "fastapi": "0.161.1",
+    "pydantic": "2.14.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "numpy": "2.5.4",
+    "httpx": "0.28.1",
+    "streamlit": "1.66.1",
+    "litellm": "1.106.2",
+    "pytest": "9.1.1",
+    "uvicorn": "0.54.0"
+  },
+  "modelo": "Pipeline",
+  "pasos": [
+    "StandardScaler",
+    "LogisticRegression"
+  ],
+  "classes": [
+    0,
+    1
+  ],
+  "n_features": 6,
+  "sha256_original": "2385d13988b9292007c50a7b49a58da76ce5faf360d9985d853d0a8bbc6633c4",
+  "sha256_entrega": "58604dec10c974dedbfa5ea485b8dfd4f6c9ab380d644ba74c6c061985b22e2b",
+  "procedencia": "Script docente sin cambios; 3000 filas sintéticas, semilla 7. Regenerado por InconsistentVersionWarning 1.7.2 -> 1.9.1."
+}

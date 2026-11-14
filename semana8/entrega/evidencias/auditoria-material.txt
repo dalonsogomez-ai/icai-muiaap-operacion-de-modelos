@@ -1,0 +1,11 @@
+Archivos diferentes respecto al material docente:
+README.md
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/app/routers/chat.py
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/app/routers/predict.py
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/app/schemas/prestamo.py
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/app/services/modelo.py
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/app/services/orquestador.py
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/models/modelo_impago.joblib
+modules/08-chatbot-llm-api/exercises/01-chatbot-riesgo-impago/problem/uv.lock
+OK: tests, LiteLLM, frontend, schemas del chat, script y pyproject sin cambios.
+SHA256 MD: e03bd43bfbe94b1e0218dd1a812b4b7b1e892a5ebea97a2ca22c610e137992ef
