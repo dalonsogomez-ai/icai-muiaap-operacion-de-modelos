@@ -1,0 +1,16 @@
+M1 leaky: 200 ['band', 'confidence', 'raw_score', 'threshold_config']
+M1 public: 200 ['band', 'confidence', 'is_reliable', 'note', 'served_at']
+M1 filtered: 200 ['band', 'confidence', 'is_reliable', 'note', 'served_at']
+M1 PublicScore documenta is_reliable.
+M2 {'age': 30, 'income': 1000}: 200 None None
+M2 {'age': 'treinta', 'income': 1000}: 422 validation_error [{'field': 'age', 'message': 'Input should be a valid integer, unable to parse string as an integer'}]
+M2 {'age': 30}: 422 validation_error [{'field': 'income', 'message': 'Field required'}]
+M2 /v1/nada: 404 not_found None
+M2 /v1/boom: 500 internal_error None
+M2 modelo no disponible: 503 model_unavailable None
+M2 sin handler: 422 {'detail': [{'type': 'int_parsing', 'loc': ['body', 'age'], 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': 'treinta'}]}
+M4 con raise_server_exceptions=True: el cliente vuelve a lanzar RuntimeError.
+M3 ejemplos: ['valid', 'minor', 'no_income']; respuestas: ['200', '422', '503']
+..........                                                               [100%]
+10 passed in 0.20s
+All checks passed!

@@ -1,0 +1,18 @@
+$ uv sync --locked
+Resolved 67 packages in 7ms
+Checked 65 packages in 15ms
+$ uv run --locked python -m wine_api.export_openapi
+OpenAPI escrito en contracts/openapi.json
+$ uv run --locked pytest -q
+.................................                                        [100%]
+33 passed in 0.40s
+$ uv run --locked ruff check .
+All checks passed!
+$ uv run --locked ruff format --check .
+18 files already formatted
+GET /openapi.json -> 200
+OpenAPI HTTP coincide con el contrato 1.1.0.
+GET /health -> 200
+POST /v1/predictions -> 200
+POST /v1/predictions -> 422 (validation_error)
+POST /v1/predictions -> 400 (invalid_json)
